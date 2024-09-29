@@ -12,11 +12,7 @@ class Storage {
     }
     removeItem(itemToRemove) {
         
-        if (this.#items.includes(itemToRemove)) {
-            
-            this.#items.pop(itemToRemove);
-            // this.#items.shift(itemToRemove);
-        }
+        this.#items = this.#items.filter(item => item !== itemToRemove);
         
     }
 
